@@ -5,6 +5,7 @@ class Solution:
     def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:
         # 思路:先倒序排序，然后获得一个sum(nums),
         # 接下来制作summations用于保存每个长度的子字符串所需要的最小sum
+        # 由于这个方法的搜寻效率很低，所以时间花费比较高
         nums.sort(reverse=True)
         summation = sum(nums)
         summations = [summation]
